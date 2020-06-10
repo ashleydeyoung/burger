@@ -4,7 +4,4 @@ const orm = require("../config/orm.js");
 //for the ORM
 
 
-
-
-
 module.exports = burger;
