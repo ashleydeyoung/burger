@@ -16,49 +16,69 @@
       integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
       crossorigin="anonymous"
     />
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/assets/js/burger.js"></script>
   </head>
   <body>
-    <!-- {{{body}}} -->
+    {{{body}}}
     <div class="jumbotron text-center bg-warning">
-        <i class="fas fa-hamburger"></i>
-        <h1 class="display-4">Eat-Da-Burger!</h1>
+      <i class="fas fa-hamburger"></i>
+      <h1 class="display-4">Eat-Da-Burger!</h1>
     </div>
-                    <div class="container">
-
+    <div class="container">
       <div class="row">
         <!-- Ready burgers -->
         <div class="col-sm-6">
           <ul>
-            <span><strong> 1 BIG BURGER </strong></span>
-            <button type="button" class="btn btn-light">DEVOUR IT!</button>
+            {{#each burgers}} {{#unless devoured}}
+            <li>{{id}}. {{burger_name}}</li>
+
+            <button
+              type="submit"
+              data-id="{{id}}"
+              class="btn btn-light devoured"
+            >
+              DEVOUR IT!
+            </button>
+
             <hr />
+            {{/unless}} {{/each}}
           </ul>
         </div>
         <!-- Devoured Burgers -->
         <div class="col-sm-6">
           <ul>
-            <span><strong> 2 DEVOURED BURGERS </strong></span>
-            <hr />
+            {{#each burgers}} {{#if devoured}}
+            <li>{{id}}. {{burger_name}}</li>
+            {{/if}} {{/each}}
           </ul>
         </div>
       </div>
       <!-- form -->
-      <div class= "row">
-          <div class= "col-sm-3"></div>
-          <div class= "col-sm-6">
-              <form class="text-center">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="burger_name" value="" id="enter_text">
-                  <div>
-                    <button type="button" class="btn btn-primary">Submit</button>
-                  </div>
-                  <div>
-                    <label for="exampleFormControlTextarea1">Enter a burger you want to eat. Click the "Submit" button.</label>
-                  </div>
-                </div>
-              </form>
 
-          </div>
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+          <form class="text-center" action="/burgers" method="POST">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="burger_name"
+              />
+              <div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+              <div>
+                <label for="exampleFormControlTextarea1"
+                  >Enter a burger you want to eat. Click the "Submit"
+                  button.</label
+                >
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </body>
