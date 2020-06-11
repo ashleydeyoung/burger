@@ -1,65 +1,60 @@
-    <div class="jumbotron text-center bg-warning">
-      <img src="/assets/img/hamburger.png" alt="hamburger" />
-      <h1 class="display-4">Eat-Da-Burger!</h1>
-    </div>
-    <div class="container">
-      <div class="row">
-        <!-- New burgers -->
-        <div class="col-sm-6">
-          <ul>
-            {{#each burgers}} {{#unless devoured}}
-            <div class="text-center newBurger">
-              <p>{{id}}. {{burger_name}}</p>
+<div class="jumbotron text-center bg-warning">
+  <img src="/assets/img/hamburger.png" alt="hamburger" />
+  <h1 class="display-4">Eat-Da-Burger!</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <!-- New burgers -->
+    <div class="col-sm-6">
+      <ul>
+        {{#each burgers}} {{#unless devoured}}
+        <div class="row">
 
-              <button
-                type="submit"
-                data-id="{{id}}"
-                class="btn btn-dark devoured"
-              >
-                DEVOUR IT!
-              </button>
-            </div>
-            <hr />
-            {{/unless}} {{/each}}
-          </ul>
+          <div class="col-sm-6 text-center newBurger">
+            <p>{{id}}. {{burger_name}}</p>
+          </div>
+          <div class= "col-sm-6">
+            <button type="submit" data-id="{{id}}" class="btn btn-dark devoured">
+              DEVOUR IT!
+            </button>
+          </div>
         </div>
-        <!-- Devoured Burgers -->
-        <div class="col-sm-6">
-          <ul>
-            {{#each burgers}} {{#if devoured}}
-            <div class="burgerConsumed">
-              <div>{{id}}. {{burger_name}}</div>
-            </div>
-            <hr />
-            {{/if}} {{/each}}
-          </ul>
-        </div>
-      </div>
-      <!-- form -->
-
-      <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6">
-          <form class="text-center" action="/burgers" method="POST">
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                name="burger_name"
-              />
-              <div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
-              <div>
-                <label class="label"
-                  ><p>
-                    Enter a burger you want to eat. Click the "Submit" button.
-                  </p></label
-                >
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
+        <hr />
+        {{/unless}} {{/each}}
+      </ul>
     </div>
+    <!-- Devoured Burgers -->
+    <div class="col-sm-6">
+      <ul>
+        {{#each burgers}} {{#if devoured}}
+        <div class="burgerConsumed">
+          <div>{{id}}. {{burger_name}}</div>
+        </div>
+        <hr />
+        {{/if}} {{/each}}
+      </ul>
+    </div>
+  </div>
+  <!-- form -->
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+      <form class="text-center" action="/burgers" method="POST">
+        <div class="form-group">
+          <input type="text" class="form-control" id="name" name="burger_name" />
+          <div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+          <div>
+            <label class="label">
+              <p>
+                Enter a burger you want to eat. Click the "Submit" button.
+              </p>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

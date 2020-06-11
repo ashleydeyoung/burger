@@ -31,7 +31,14 @@ SO THAT I can keep track of the burgers I have eaten.
 
   ## Demo of Application
 
-  ![Demo of Eat-Da-Burger App](/public/assets/img/burger.gif)
+  [Image of Eat-Da-Burger Homepage](/public/assets/img/burger-preview.png)
+  
+  *Image of Eat-da-Burger homepage*
+
+
+  ![Demo of Eat-Da-Burger App](/public/assets/img/burgers.gif)
+
+  *demo of Application*
 
   ## Questions
   
