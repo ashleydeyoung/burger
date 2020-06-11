@@ -1,3 +1,28 @@
-html {
+body {
     background-color: #FFC04C;
+}
+
+.newBurger {
+    background-color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.burgerConsumed {
+    background-color: rgb(230, 227, 227);
+    color: grey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.label {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }

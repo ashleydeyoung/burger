@@ -1,3 +1,4 @@
+//setup MySQL connection
 const mysql = require ("mysql");
 var connection = mysql.createConnection({
     host: "localhost",
@@ -7,6 +8,7 @@ var connection = mysql.createConnection({
     database: "burgers_db"
   });
   
+  //makes connection
   connection.connect(function(err) {
     if (err) {
       console.error("error connecting: " + err.stack);
@@ -16,4 +18,6 @@ var connection = mysql.createConnection({
     console.log("connected as id " + connection.threadId);
   });
   
+
+  //export to orm
   module.exports = connection;

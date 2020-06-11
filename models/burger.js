@@ -1,7 +1,6 @@
 const orm = require("../config/orm.js");
 
-//code that will call the ORM functions using burger specific input 
-//for the ORM
+//code that will call the ORM functions using burger specific input for the ORM
 
 var burger =  {
  selectAll: function(cb) {
@@ -22,4 +21,5 @@ var burger =  {
  }
 };
 
+//exports to burgers_controllers.js
 module.exports = burger;

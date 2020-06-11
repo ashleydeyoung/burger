@@ -1,3 +1,4 @@
+//code to send to server once button is clicked
 $(function() {
     $(".devoured").on("click", function(event) {
       var id = $(this).data("id");
@@ -7,7 +8,7 @@ $(function() {
         type: "PUT"
       }).then(
         function() {
-          console.log("changed burger to devoured");
+          console.log("Burger devoured!");
           // Reload the page to get the updated list
           location.reload();
         }
