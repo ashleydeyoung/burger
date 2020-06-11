@@ -33,12 +33,12 @@ SO THAT I can keep track of the burgers I have eaten.
 
   ![Image of Eat-Da-Burger Homepage](/public/assets/img/burger-preview.png)
   
-  *Image of Eat-da-Burger homepage*
+  *Image of Eat-Da-Burger Application*
 
 
   ![Demo of Eat-Da-Burger App](/public/assets/img/burgers.gif)
 
-  *demo of Application*
+  *demo of Eat-Da-Burger Application*
 
   ## Questions
   
