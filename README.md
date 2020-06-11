@@ -26,12 +26,12 @@ SO THAT I can keep track of the burgers I have eaten.
 
   Visit the following link for deployed application:
 
-  [Eat-Da-Burger Application](https://ancient-lake-90836.herokuapp.com/)
+  [Eat-Da-Burger Application](https://frozen-beach-67804.herokuapp.com//)
 
 
   ## Demo of Application
 
-  ![Demo of Eat-Da-Burger App](public/assets/images/note-taker.gif)
+  ![Demo of Eat-Da-Burger App](/public/assets/img/burger.gif)
 
   ## Questions
   
