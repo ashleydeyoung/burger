@@ -3,8 +3,8 @@ const mysql = require("mysql");
 var connection;
 
 //Heroku
-if (process.env.JAWSDB_UR) {
-  connection = mysql.createConnection(process.env.JAWSDB_UR);
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
   connection = mysql.createConnection({
     host: "localhost",
